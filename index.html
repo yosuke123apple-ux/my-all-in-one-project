@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>今日の1タスク</title>
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+<main class="app">
+  <!-- 設定ボタン -->
+<button class="settings-btn">⚙</button>
+
+<!-- 設定モーダル -->
+<div class="settings-modal">
+  <div class="settings-content">
+    <h2>設定</h2>
+
+    <!-- タスク種類 -->
+<div class="notify-settings">
+  <label class="notify-label">通知時刻</label>
+
+<div class="notify-times">
+  <label>
+    朝
+    <input id="notify-1" type="time" class="notify-time" />
+  </label>
+  <label>
+    昼
+    <input id="notify-2" type="time" class="notify-time" />
+  </label>
+  <label>
+    夜
+    <input id="notify-3" type="time" class="notify-time" />
+  </label>
+</div>
+
+
+
+  <p class="notify-hint">※ 1日最大3回通知されます</p>
+</div>
+
+    <!-- 言語 -->
+    <label for="language">言語:</label>
+    <select id="language">
+      <option value="ja">日本語</option>
+      <option value="en">English</option>
+    </select>
+
+
+    <button class="close-settings">閉じる</button>
+  </div>
+</div>
+
+<!-- 日付 -->
+<p class="task">10分だけストレッチ</p>
+
+<!-- 完了ボタン -->
+<button class="complete-btn">完了！</button>
+
+<!-- ほめ言葉 -->
+
+
+<!-- カレンダーボタン -->
+<div class="after-done">
+
+
+
+<!-- カレンダーをここに出す -->
+<div class="calendar-section">
+  <div class="calendar-container">
+    <div class="calendar-header">
+      <button class="prev-month">←</button>
+      <span class="month-year">1月</span>
+      <button class="next-month">→</button>
+    </div>
+    <div class="calendar-grid"></div>
+  </div>
+</div>
+<div class="progress-bar-container">
+  <div class="progress-bar"></div>
+</div>
+
+</main>
+
+  <!-- JS読み込み -->
+<script src="src/test.js" defer></script>
+<script src="src/sw-register.js" defer></script>
+
+</script>
+</body>
+</html>
