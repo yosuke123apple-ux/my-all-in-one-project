@@ -1,0 +1,6 @@
+{
+  "appId": "com.yosuk.hand",
+  "appName": "hand",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
