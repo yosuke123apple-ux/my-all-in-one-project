@@ -508,8 +508,6 @@ function saveNotifyTimes() {
   // 3つの入力欄から値を取る
   const times = [
     (document.getElementById("notify-1") as HTMLInputElement)?.value,
-    (document.getElementById("notify-2") as HTMLInputElement)?.value,
-    (document.getElementById("notify-3") as HTMLInputElement)?.value,
   ]
     // 空文字とか undefined を消す
     .filter(Boolean);
@@ -529,7 +527,7 @@ function checkAndNotify() {
 
   // 通知時刻一覧を取得（なければデフォルト3つ）
   const times: string[] = JSON.parse(
-    localStorage.getItem("notifyTimes") || '["08:00", "13:00", "20:00"]'
+    localStorage.getItem("notifyTimes") || '["08:00",]'
   );
 
   // 現在時刻
@@ -572,7 +570,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ✅ 保存された通知時刻を入力欄に反映
   // -----------------------------------------
   const times: string[] = JSON.parse(
-    localStorage.getItem("notifyTimes") || '["08:00", "13:00", "20:00"]'
+    localStorage.getItem("notifyTimes") || '["08:00"]'
   );
 
   times.forEach((t, i) => {
@@ -583,7 +581,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // -----------------------------------------
   // ✅ 通知時刻が変わったら保存する
   // -----------------------------------------
-  ["notify-1", "notify-2", "notify-3"].forEach((id) => {
+  ["notify-1"].forEach((id) => {
     document.getElementById(id)?.addEventListener("change", saveNotifyTimes);
   });
 
