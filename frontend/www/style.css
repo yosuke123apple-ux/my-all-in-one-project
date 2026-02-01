@@ -13,6 +13,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100dvh; /* スマホのメニューバーを除いた「本当の高さ」に合わせる */
+  overflow: hidden; /* 画面からはみ出る部分を隠してスクロールを禁止する */
+  display: flex;
+  flex-direction: column;
 }
 
 /* ===== アプリ本体 ===== */
@@ -420,4 +427,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 4px;
+}
+.notice {
+  font-size: 13px;
 }
